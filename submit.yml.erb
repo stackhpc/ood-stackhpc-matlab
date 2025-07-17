@@ -1,0 +1,9 @@
+---
+batch_connect:
+  template: vnc
+script:
+  job_name: "ood-matlab"
+  native:
+      - <%= "--nodes=1" %>
+      - <%= "--ntasks=#{num_cores}" %>
+      - <%= "--nodelist=#{node}" %>
